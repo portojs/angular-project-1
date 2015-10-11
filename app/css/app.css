@@ -20,5 +20,6 @@ a {
 }
 
 .active {
+  color: white;
   background: orange;
 }

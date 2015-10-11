@@ -1,6 +1,7 @@
 (function(){
   angular.module('listApp', [])
     .controller('ListController', function() {
+      this.tab = 1;
       this.listItems = [
         {
           url: "img/numbers-01.jpg",
