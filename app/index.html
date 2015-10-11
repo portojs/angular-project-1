@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Peter Krevenets | The List</title>
+    <title>Peter Krevenets | List Provider</title>
     <!-- vendor libraries -->
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
@@ -19,49 +19,48 @@
   </head>
 
   <body ng-controller="ListController as listCtrl">
-
     <main-header></main-header>
-
-    <section>
-      <ul>
-        <li>
-          <a href="img/numbers-01.jpg">
-            <img src="img/numbers-01.jpg" alt="">
-            <p>Provided by: &copy; Tom Sawyer, 1889.</p>
-          </a>
-        </li>
-        <li>
-          <a href="img/numbers-02.jpg">
-            <img src="img/numbers-02.jpg" alt="">
-            <p>Provided by: &copy; Jimi Hendrix, 1969.</p>
-          </a>
-        </li>
-        <li>
-          <a href="img/numbers-06.jpg">
-            <img src="img/numbers-06.jpg" alt="">
-            <p>Provided by: &copy; Freddy Mercury, 1989.</p>
-          </a>
-        </li>
-        <li>
-          <a href="img/numbers-09.jpg">
-            <img src="img/numbers-09.jpg" alt="">
-            <p>Provided by: &copy; Kurt Cobain, 1991.</p>
-          </a>
-        </li>
-        <li>
-          <a href="img/numbers-12.jpg">
-            <img src="img/numbers-12.jpg" alt="">
-            <p>Provided by: &copy; Jim Morrison, 1970.</p>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <footer>
-      <a href="http://twitter.com/peter_krevenets"><img src="img/twitter-wrap.png" alt="Twitter Logo"></a>
-      <a href="http://facebook.com/peter.krevenets"><img src="img/facebook-wrap.png" alt="Facebook Logo"></a>
-      <p>&copy; 2015 Peter Krevenets.</p>
-    </footer>
+    <div id="wrapper">
+      <section>
+        <ul>
+          <li>
+            <a href="img/numbers-01.jpg">
+              <img src="img/numbers-01.jpg" alt="">
+              <p>Provided by: &copy; Tom Sawyer, 1889.</p>
+            </a>
+          </li>
+          <li>
+            <a href="img/numbers-02.jpg">
+              <img src="img/numbers-02.jpg" alt="">
+              <p>Provided by: &copy; Jimi Hendrix, 1969.</p>
+            </a>
+          </li>
+          <li>
+            <a href="img/numbers-06.jpg">
+              <img src="img/numbers-06.jpg" alt="">
+              <p>Provided by: &copy; Freddy Mercury, 1989.</p>
+            </a>
+          </li>
+          <li>
+            <a href="img/numbers-09.jpg">
+              <img src="img/numbers-09.jpg" alt="">
+              <p>Provided by: &copy; Kurt Cobain, 1991.</p>
+            </a>
+          </li>
+          <li>
+            <a href="img/numbers-12.jpg">
+              <img src="img/numbers-12.jpg" alt="">
+              <p>Provided by: &copy; Jim Morrison, 1970.</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <footer>
+        <a href="http://twitter.com/peter_krevenets"><img src="img/twitter-wrap.png" alt="Twitter Logo"></a>
+        <a href="http://facebook.com/peter.krevenets"><img src="img/facebook-wrap.png" alt="Facebook Logo"></a>
+        <p>&copy; 2015 Peter Krevenets.</p>
+      </footer>
+    </div>
 
     <!--<div ng-show="false">-->
       <!--<ul class="menu">-->
