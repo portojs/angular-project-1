@@ -6,7 +6,7 @@
           url: "img/numbers-01.jpg",
           author: "Provided by: &copy; Tom Sawyer, 1889.",
           canPurchase: false,
-          soldOut: true
+          soldOut: false
         },
         {
           url: "img/numbers-02.jpg",
