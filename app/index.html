@@ -23,7 +23,7 @@
     <div id="wrapper">
       <section>
         <ul>
-          <li>
+          <li ng-hide="listCtrl.listItems[0].soldOut">
             <a ng-href="{{listCtrl.listItems[0].url}}">
               <img ng-src="{{listCtrl.listItems[0].url}}" alt="">
               <p>{{listCtrl.listItems[0].author}}</p>
