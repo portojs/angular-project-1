@@ -5,5 +5,16 @@ a {
 }
 
 #wrapper {
-  
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+#logo {
+  text-align: center;
+  margin: 0;
+}
+
+a {
+  color: #6ab47b;
 }
