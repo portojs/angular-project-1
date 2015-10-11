@@ -1,20 +1,33 @@
-'use strict';
-
-// Declare app level module which depends on views, and components
-angular.module('listApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-  ])
-  .config(['$routeProvider', function($routeProvider) {
-    $routeProvider.otherwise({redirectTo: '/view1'});
-  }])
-  .controller('ListController', function() {
-  })
-  .directive('mainHeader', function() {
-    return {
-      restrict: 'E',
-      templateUrl: 'partials/main-header.html'
-    };
-  });
+(function(){
+  angular.module('listApp', [])
+    .controller('ListController', function() {
+      this.listItems = [
+        {
+          url: "img/numbers-01.jpg",
+          author: "Provided by: &copy; Tom Sawyer, 1889."
+        },
+        {
+          url: "img/numbers-02.jpg",
+          author: "Provided by: &copy; Jimi Hendrix, 1969."
+        },
+        {
+          url: "img/numbers-06.jpg",
+          author: "Provided by: &copy; Freddy Mercury, 1989."
+        },
+        {
+          url: "img/numbers-09.jpg",
+          author: "Provided by: &copy; Kurt Cobain, 1991."
+        },
+        {
+          url: "img/numbers-12.jpg",
+          author: "Provided by: &copy; Jim Morrison, 1970."
+        }
+      ];
+    })
+    .directive('mainHeader', function() {
+      return {
+        restrict: 'E',
+        templateUrl: 'partials/main-header.html'
+      };
+    });
+})();
