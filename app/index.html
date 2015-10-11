@@ -28,12 +28,14 @@
               <img ng-src="{{listCtrl.listItems[0].url}}" alt="">
               <p>{{listCtrl.listItems[0].author}}</p>
             </a>
+            <button ng-show="listCtrl.listItems[0].canPurchase">Add to Cart</button>
           </li>
           <li>
-            <a href="img/numbers-02.jpg">
-              <img src="img/numbers-02.jpg" alt="">
-              <p>Provided by: &copy; Jimi Hendrix, 1969.</p>
+            <a ng-href="{{listCtrl.listItems[1].url}}">
+              <img ng-src="{{listCtrl.listItems[1].url}}" alt="">
+              <p>{{listCtrl.listItems[1].author}}</p>
             </a>
+            <button ng-show="listCtrl.listItems[1].canPurchase">Add to Cart</button>
           </li>
           <li>
             <a href="img/numbers-06.jpg">
