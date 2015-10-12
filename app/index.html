@@ -30,18 +30,20 @@
             </a>
             <p>Price: {{item.price | currency}}</p>
             <button ng-show="item.canPurchase">Add to Cart</button>
-            <ul class="product-tabs">
-              <li ng-class="{ active:listCtrl.tab === 1 }" ng-click="listCtrl.tab = 1">Description</li>
-              <li ng-class="{ active:listCtrl.tab === 2 }" ng-click="listCtrl.tab = 2">Reviews</li>
-            </ul>
-            <div>
-              <div class="panel" ng-show="listCtrl.tab === 1">
-                <h4>Description</h4>
-                <p>{{item.description}}</p>
-              </div>
-              <div class="panel" ng-show="listCtrl.tab === 2">
-                <h4>Reviews</h4>
-                <blockquote>None yet</blockquote>
+            <div ng-controller="PanelController as panelCtrl">
+              <ul class="product-tabs">
+                <li ng-class="{ active:panelCtrl.isSelected(1) }" ng-click="panelCtrl.selectTab(1)">Description</li>
+                <li ng-class="{ active:panelCtrl.isSelected(2) }" ng-click="panelCtrl.selectTab(2)">Reviews</li>
+              </ul>
+              <div>
+                <div class="panel" ng-show="panelCtrl.isSelected(1)">
+                  <h4>Description</h4>
+                  <p>{{item.description}}</p>
+                </div>
+                <div class="panel" ng-show="panelCtrl.isSelected(2)">
+                  <h4>Reviews</h4>
+                  <blockquote>None yet</blockquote>
+                </div>
               </div>
             </div>
           </li>

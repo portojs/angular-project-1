@@ -1,7 +1,6 @@
 (function(){
   angular.module('listApp', [])
     .controller('ListController', function() {
-      this.tab = 1;
       this.listItems = [
         {
           url: "img/numbers-01.jpg",
@@ -44,6 +43,15 @@
           soldOut: false
         }
       ];
+    })
+    .controller('PanelController', function() {
+      this.tab = 1;
+      this.selectTab = function(setTab) {
+        this.tab = setTab;
+      };
+      this.isSelected = function(checkTab) {
+        return checkTab === this.tab;
+      };
     })
     .directive('mainHeader', function() {
       return {
