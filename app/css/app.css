@@ -24,8 +24,7 @@ header {
   border-color: #599a68;
 }
 
-h1,
-h2 {
+h1, h2 {
   color: #fff;
 }
 
@@ -33,9 +32,12 @@ nav {
   background: #599a68;
 }
 
-nav a,
-a:visited {
+nav a, a:visited {
   color: #fff;
+}
+
+nav a.selected, nav a:hover {
+  color: #32673f;
 }
 
 .active {
