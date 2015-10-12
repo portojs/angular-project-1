@@ -1,8 +1,6 @@
-/* app css stylesheet */
-
-a {
-  text-decoration: none;
-}
+/*****************************************************
+GENERAL
+******************************************************/
 
 #wrapper {
   max-width: 940px;
@@ -10,42 +8,65 @@ a {
   padding: 0 5%;
 }
 
+a {
+  text-decoration: none;
+}
+
+
+
+/*****************************************************
+HEADING
+******************************************************/
+
 #logo {
   text-align: center;
   margin: 0;
 }
 
-a {
-  color: #6ab47b;
-}
 
-header {
-  background: #6ab47b;
-  border-color: #599a68;
-}
 
-h1, h2 {
-  color: #fff;
-}
+/*****************************************************
+COLORS
+******************************************************/
 
-nav {
-  background: #599a68;
-}
-
-nav a, a:visited {
-  color: #fff;
-}
-
-nav a.selected, nav a:hover {
-  color: #32673f;
-}
-
+/* site body */
 body {
   background-color: #fff;
   color: #999;
 }
 
-.active {
+/* green header */
+header {
+  background: #6ab47b;
+  border-color: #599a68;
+}
+
+/* nav background on mobile */
+nav {
+  background: #599a68;
+}
+
+/* logo text */
+h1, h2 {
+  color: #fff;
+}
+
+/* links */
+a {
+  color: #6ab47b;
+}
+
+/* nav link */
+nav a, a:visited {
+  color: #fff;
+}
+
+/* selected nav link */
+nav a.selected, nav a:hover {
+  color: #32673f;
+}
+
+.product-tabs .active {
   color: white;
   background: orange;
 }
