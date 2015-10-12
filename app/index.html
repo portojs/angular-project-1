@@ -46,11 +46,15 @@
                     <b>{{review.text}}</b>
                     <cite>{{review.author}}</cite>
                   </blockquote>
-                  <form>
+                  <form name="reviewForm">
+                    <blockquote>
+                      <b>{{review.text}}</b>
+                      <cite>{{review.author}}</cite>
+                    </blockquote>
                     <label for="reviewText">Your ideas:</label>
-                    <textarea id="reviewText"></textarea>
+                    <textarea id="reviewText" placeholder="your review here" ng-model="review.text"></textarea>
                     <label for="reviewAuthor">By:</label>
-                    <input id="reviewAuthor" type="email" />
+                    <input id="reviewAuthor" type="email" placeholder="your email here" ng-model="review.author" />
                     <input type="submit" value="Submit" />
                   </form>
                 </div>
