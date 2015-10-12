@@ -42,10 +42,17 @@
                 </div>
                 <div class="panel" ng-show="panelCtrl.isSelected(2)">
                   <h4>Reviews</h4>
-                  <div ng-repeat="review in item.reviews">
-                    <blockquote>{{review.text}}</blockquote>
-                    <p>{{review.author}}</p>
-                  </div>
+                  <blockquote ng-repeat="review in item.reviews">
+                    <b>{{review.text}}</b>
+                    <cite>{{review.author}}</cite>
+                  </blockquote>
+                  <form>
+                    <label for="reviewText">Your ideas:</label>
+                    <textarea id="reviewText"></textarea>
+                    <label for="reviewAuthor">By:</label>
+                    <input id="reviewAuthor" type="email" />
+                    <input type="submit" value="Submit" />
+                  </form>
                 </div>
               </div>
             </div>
