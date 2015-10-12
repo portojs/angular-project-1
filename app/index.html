@@ -42,7 +42,10 @@
                 </div>
                 <div class="panel" ng-show="panelCtrl.isSelected(2)">
                   <h4>Reviews</h4>
-                  <blockquote>None yet</blockquote>
+                  <div ng-repeat="review in item.reviews">
+                    <blockquote>{{review.text}}</blockquote>
+                    <p>{{review.author}}</p>
+                  </div>
                 </div>
               </div>
             </div>
