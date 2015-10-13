@@ -27,9 +27,15 @@ h1 {
   font-family: 'Changa One', sans-serif;
   margin: 15px 0;
   font-size: 1.75em;
+  font-weight: normal;
+  line-height: 0.8em;
 }
 
-
+h2 {
+  font-size: 0.75em;
+  margin: -5px 0 0;
+  font-weight: normal;
+}
 
 /*****************************************************
 COLORS
