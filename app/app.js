@@ -97,6 +97,9 @@
         return checkTab === this.tab;
       };
     })
+    .controller('ReviewController', function() {
+      this.review = {};
+    })
     .directive('mainHeader', function() {
       return {
         restrict: 'E',
