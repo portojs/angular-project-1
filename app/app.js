@@ -17,6 +17,7 @@
           description: "A unique piece of art made by one of the brightest minds in human history.",
           reviews: [
             {
+              stars: 5,
               text: "Fabulous!",
               author: "dean@gmail.com"
             }
@@ -31,6 +32,7 @@
           description: "A unique piece of art made by one of the brightest minds in human history.",
           reviews: [
             {
+              stars: 5,
               text: "Fantastic!",
               author: "dean@gmail.com"
             }
@@ -45,6 +47,7 @@
           description: "A unique piece of art made by one of the brightest minds in human history.",
           reviews: [
             {
+              stars: 5,
               text: "Formidable!",
               author: "dean@gmail.com"
             }
@@ -59,6 +62,7 @@
           description: "A unique piece of art made by one of the brightest minds in human history.",
           reviews: [
             {
+              stars: 5,
               text: "Ferocious!",
               author: "dean@gmail.com"
             }
@@ -73,6 +77,7 @@
           description: "A unique piece of art made by one of the brightest minds in human history.",
           reviews: [
             {
+              stars: 5,
               text: "Fearsome!",
               author: "dean@gmail.com"
             }

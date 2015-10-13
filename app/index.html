@@ -44,17 +44,25 @@
                 <div class="panel" ng-show="panelCtrl.isSelected(2)">
                   <h4>Reviews</h4>
                   <blockquote ng-repeat="review in item.reviews">
-                    <b>{{review.text}}</b>
-                    <cite>{{review.author}}</cite>
+                    <b>Stars: {{review.stars}}</b>
+                    {{review.text}}
+                    <cite>by: {{review.author}}</cite>
                   </blockquote>
                   <form name="reviewForm">
                     <blockquote>
-                      <b>{{review.text}}</b>
-                      <cite>{{review.author}}</cite>
+                      <b>Stars: {{review.stars}}</b>
+                      {{review.text}}
+                      <cite>by: {{review.author}}</cite>
                     </blockquote>
-                    <label for="reviewText">Your ideas:</label>
-                    <textarea id="reviewText" placeholder="your review here" ng-model="review.text"></textarea>
-                    <label for="reviewAuthor">By:</label>
+                    <select ng-model="review.stars">
+                      <option value="1">1 star</option>
+                      <option value="2">2 stars</option>
+                      <option value="3">3 stars</option>
+                      <option value="4">4 stars</option>
+                      <option value="5">5 stars</option>
+                    </select>
+                    <textarea placeholder="your review here" ng-model="review.text"></textarea>
+                    <label for="reviewAuthor">by:</label>
                     <input id="reviewAuthor" type="email" placeholder="your email here" ng-model="review.author" />
                     <input type="submit" value="Submit" />
                   </form>
