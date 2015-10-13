@@ -185,3 +185,8 @@ nav a.selected, nav a:hover {
 .ng-valid.ng-dirty {
   border-color: #78fa89;
 }
+
+form div {
+  display: inline-block;
+  width: 50%;
+}

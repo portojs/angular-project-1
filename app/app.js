@@ -109,5 +109,11 @@
         restrict: 'E',
         templateUrl: 'partials/main-header.html'
       };
+    })
+    .directive('productForm', function() {
+      return {
+        restrict: 'E',
+        templateUrl: 'partials/product-form.html'
+      };
     });
 })();
