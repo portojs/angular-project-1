@@ -23,7 +23,7 @@
     <main-header></main-header>
     <div id="wrapper">
       <section ng-controller="ListController as listCtrl">
-        <ul>
+        <ul id="gallery">
           <li ng-repeat="item in listCtrl.listItems | limitTo:10 | orderBy:'-price'" ng-hide="item.soldOut">
             <a ng-href="{{item.url}}">
               <img ng-src="{{item.url}}" alt="">
