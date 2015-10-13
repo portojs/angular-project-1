@@ -2,6 +2,10 @@
 GENERAL
 ******************************************************/
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 #wrapper {
   max-width: 940px;
   margin: 0 auto;
