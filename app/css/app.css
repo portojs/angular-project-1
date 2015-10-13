@@ -170,9 +170,18 @@ nav a.selected, nav a:hover {
 }
 
 
-
+/**************************************/
+/**************************************/
 /**************************************/
 .product-tabs .active {
   color: white;
   background: orange;
+}
+
+.ng-invalid.ng-dirty {
+  border-color: #fa787e;
+}
+
+.ng-valid.ng-dirty {
+  border-color: #78fa89;
 }
