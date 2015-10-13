@@ -3,11 +3,11 @@
     <h1>Peter Krevenets</h1>
     <h2>Coder & Designer</h2>
   </a>
-  <nav>
+  <nav ng-controller="NavController as navCtrl">
     <ul>
-      <li><a class="selected" href="index.html">The List</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a ng-class="{ selected:navCtrl.buttonSelected(1) }" href="index.html" ng-click="navCtrl.selectButton(1)">The List</a></li>
+      <li><a ng-class="{ selected:navCtrl.buttonSelected(2) }" href="about.html" ng-click="navCtrl.selectButton(2)">About</a></li>
+      <li><a ng-class="{ selected:navCtrl.buttonSelected(3) }" href="contact.html" ng-click="navCtrl.selectButton(3)">Contact</a></li>
     </ul>
   </nav>
 </header>

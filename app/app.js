@@ -1,5 +1,14 @@
 (function(){
   angular.module('listApp', [])
+    .controller('NavController', function() {
+      this.button = 1;
+      this.selectButton = function(setButton) {
+        this.button = setButton;
+      };
+      this.buttonSelected = function(checkButton) {
+        return checkButton === this.button;
+      };
+    })
     .controller('ListController', function() {
       this.listItems = [
         {
