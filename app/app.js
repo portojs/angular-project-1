@@ -88,38 +88,40 @@
         }
       ];
     })
-    .controller('PanelController', function() {
-      this.tab = 1;
-      this.selectTab = function(setTab) {
-        this.tab = setTab;
-      };
-      this.isSelected = function(checkTab) {
-        return checkTab === this.tab;
-      };
-    })
-    .controller('ReviewController', function() {
-      this.review = {};
-      this.addReview = function(item) {
-        item.reviews.push(this.review);
-        this.review = {};
-      };
-    })
     .directive('mainHeader', function() {
       return {
         restrict: 'E',
         templateUrl: 'partials/main-header.html'
       };
     })
-    .directive('sectionList', function() {
-      return {
-        restrict: 'E',
-        templateUrl: 'partials/section-list.html'
-      };
-    })
     .directive('productForm', function() {
       return {
         restrict: 'E',
-        templateUrl: 'partials/product-form.html'
+        templateUrl: 'partials/product-form.html',
+        controller: function() {
+          this.review = {};
+          this.addReview = function(item) {
+            item.reviews.push(this.review);
+            this.review = {};
+          };
+        },
+        controllerAs: 'reviewCtrl'
+      };
+    })
+    .directive('productPanels', function() {
+      return {
+        restrict: 'E',
+        templateUrl: 'partials/product-panels.html',
+        controller: function(){
+          this.tab = 1;
+          this.selectTab = function(setTab) {
+            this.tab = setTab;
+          };
+          this.isSelected = function(checkTab) {
+            return checkTab === this.tab;
+          };
+        },
+        controllerAs: 'panelCtrl'
       };
     });
 })();

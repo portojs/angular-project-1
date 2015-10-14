@@ -23,7 +23,19 @@
   <body>
     <main-header ng-controller="NavController as navCtrl"></main-header>
     <div id="wrapper">
-      <section-list></section-list>
+      <section ng-controller="ListController as listCtrl">
+        <ul id="gallery">
+          <li ng-repeat="item in listCtrl.listItems | limitTo:10 | orderBy:'-price'" ng-hide="item.soldOut">
+            <a ng-href="{{item.url}}">
+              <img ng-src="{{item.url}}" alt="">
+              <p>{{item.author}}</p>
+            </a>
+            <p>Price: {{item.price | currency}}</p>
+            <button ng-show="item.canPurchase">Add to Cart</button>
+            <product-panels></product-panels>
+          </li>
+        </ul>
+      </section>
       <footer>
         <a href="http://twitter.com/peter_krevenets"><img src="img/twitter-wrap.png" alt="Twitter Logo" class="social-icon"></a>
         <a href="http://facebook.com/peter.krevenets"><img src="img/facebook-wrap.png" alt="Facebook Logo" class="social-icon"></a>
