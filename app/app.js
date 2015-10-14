@@ -1,14 +1,5 @@
 (function(){
   angular.module('listApp', [])
-    .controller('NavController', function() {
-      this.button = 1;
-      this.selectButton = function(setButton) {
-        this.button = setButton;
-      };
-      this.buttonSelected = function(checkButton) {
-        return checkButton === this.button;
-      };
-    })
     .controller('ListController', function() {
       this.listItems = [
         {
@@ -91,7 +82,17 @@
     .directive('mainHeader', function() {
       return {
         restrict: 'E',
-        templateUrl: 'partials/main-header.html'
+        templateUrl: 'partials/main-header.html',
+        controller: function() {
+          this.button = 1;
+          this.selectButton = function(setButton) {
+            this.button = setButton;
+          };
+          this.buttonSelected = function(checkButton) {
+            return checkButton === this.button;
+          };
+        },
+        controllerAs: 'navCtrl'
       };
     })
     .directive('productForm', function() {
