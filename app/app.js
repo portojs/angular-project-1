@@ -110,6 +110,12 @@
         templateUrl: 'partials/main-header.html'
       };
     })
+    .directive('sectionList', function() {
+      return {
+        restrict: 'E',
+        templateUrl: 'partials/section-list.html'
+      };
+    })
     .directive('productForm', function() {
       return {
         restrict: 'E',

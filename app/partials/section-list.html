@@ -1,0 +1,31 @@
+<section ng-controller="ListController as listCtrl">
+  <ul id="gallery">
+    <li ng-repeat="item in listCtrl.listItems | limitTo:10 | orderBy:'-price'" ng-hide="item.soldOut">
+      <a ng-href="{{item.url}}">
+        <img ng-src="{{item.url}}" alt="">
+        <p>{{item.author}}</p>
+      </a>
+      <p>Price: {{item.price | currency}}</p>
+      <button ng-show="item.canPurchase">Add to Cart</button>
+      <div ng-controller="PanelController as panelCtrl">
+        <ul class="product-tabs">
+          <li ng-class="{ active:panelCtrl.isSelected(1) }" ng-click="panelCtrl.selectTab(1)">Description</li>
+          <li ng-class="{ active:panelCtrl.isSelected(2) }" ng-click="panelCtrl.selectTab(2)">Reviews</li>
+        </ul>
+        <div class="panel" ng-show="panelCtrl.isSelected(1)">
+          <h4>Description</h4>
+          <p>{{item.description}}</p>
+        </div>
+        <div class="panel" ng-show="panelCtrl.isSelected(2)">
+          <h4>Reviews</h4>
+          <blockquote ng-repeat="review in item.reviews">
+            <b>Stars: {{review.stars}}</b>
+            {{review.text}}
+            <cite>by: {{review.author}}</cite>
+          </blockquote>
+          <product-form></product-form>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>

@@ -224,6 +224,9 @@ nav a.selected, nav a:hover {
 /**************************************/
 /**************************************/
 /**************************************/
+.product-tabs li {
+  display: block;
+}
 .product-tabs .active {
   color: white;
   background: orange;
