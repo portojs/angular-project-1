@@ -26,12 +26,7 @@
       <section ng-controller="ListController as listCtrl">
         <ul id="gallery">
           <li ng-repeat="item in listCtrl.listItems | limitTo:10 | orderBy:'-price'" ng-hide="item.soldOut">
-            <a ng-href="{{item.url}}">
-              <img ng-src="{{item.url}}" alt="">
-              <p>{{item.author}}</p>
-            </a>
-            <p>Price: {{item.price | currency}}</p>
-            <button ng-show="item.canPurchase">Add to Cart</button>
+            <product-info></product-info>
             <product-panels></product-panels>
           </li>
         </ul>

@@ -95,6 +95,12 @@
         controllerAs: 'navCtrl'
       };
     })
+    .directive('productInfo', function() {
+      return {
+        restrict: 'E',
+        templateUrl: 'partials/product-info.html'
+      }
+    })
     .directive('productForm', function() {
       return {
         restrict: 'E',

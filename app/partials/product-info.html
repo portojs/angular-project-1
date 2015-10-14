@@ -1,0 +1,6 @@
+<a ng-href="{{item.url}}">
+  <img ng-src="{{item.url}}" alt="">
+  <p>{{item.author}}</p>
+</a>
+<p>Price: {{item.price | currency}}</p>
+<button ng-show="item.canPurchase">Add to Cart</button>
