@@ -241,4 +241,5 @@ nav a.selected, nav a:hover {
 form div {
   display: inline-block;
   width: 50%;
+  margin: 10px;
 }

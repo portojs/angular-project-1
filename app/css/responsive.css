@@ -1,3 +1,9 @@
+@media screen and (max-width: 480px) {
+  #gallery li:nth-child(3n) {
+    clear: left;
+  }
+}
+
 @media screen and (min-width: 480px) {
 
   /*****************************************************
