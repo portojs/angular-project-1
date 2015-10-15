@@ -1,6 +1,7 @@
 <a ng-href="{{item.url}}">
   <img ng-src="{{item.url}}" alt="">
   <p>{{item.author}}</p>
+  <span ng-repeat="(type, state) in item.type" ng-show="state">{{type}}</span>
 </a>
 <p>Price: {{item.price | currency}}</p>
 <button ng-show="item.canPurchase">Add to Cart</button>
