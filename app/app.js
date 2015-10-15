@@ -3,8 +3,12 @@
     .controller('ListController', ['$http', function($http) {
       var list = this;
       list.listItems = [];
+      list.itemTypes = [];
       $http.get('products.json').success(function(data) {
         list.listItems = data;
+      });
+      $http.get('products-types.json').success(function(data) {
+        list.itemTypes = data;
       });
     }])
     .directive('mainHeader', function() {
