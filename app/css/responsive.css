@@ -33,6 +33,19 @@
   #gallery li:nth-child(4n) {
     clear: left;
   }
+
+
+
+  /*****************************************************
+  PAGE: ABOUT
+  ******************************************************/
+
+  .profile-photo {
+    float: left;
+    margin: 0 5% 80px 0;
+  }
+
+
 }
 
 @media screen and (min-width: 660px) {
