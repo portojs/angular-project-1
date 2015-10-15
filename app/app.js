@@ -1,12 +1,12 @@
 (function(){
   angular.module('listApp', ['list-products'])
     .controller('ListController', ['$http', function($http) {
-      var list = this;
-      list.listItems = doom;
-      //list.itemTypes = [];
-      //$http.get('products.json').success(function(data) {
-      //  list.listItems = data;
-      //});
+      var listCtrl = this;
+      //listCtrl.listItems = doom;
+      listCtrl.itemTypes = [];
+      $http.get('products.json').success(function(data) {
+        listCtrl.listItems = data;
+      });
       //$http.get('products-types.json').success(function(data) {
       //  list.itemTypes = data;
       //});
