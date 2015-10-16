@@ -26,23 +26,15 @@
         },
         controllerAs: 'navCtrl'
       };
+    })
+    .directive('testForm', function() {
+      return {
+        restrict: 'E',
+        templateUrl: 'partials/test-form.html',
+        controller: function() {
+          this.showForm = false;
+        },
+        controllerAs: 'testFormCtrl'
+      }
     });
-  var doom = [
-    {
-      url: "img/numbers-01.jpg",
-      author: "Provided by: &copy; Tom Sawyer, 1889.",
-      description: "A unique piece of art made by one of the brightest minds in human history.",
-      type: {"borrowed": true, "graphics": true},
-      reviews: [
-        {
-          stars: 5,
-          text: "Fabulous!",
-          author: "dean@gmail.com"
-        }
-      ],
-      price: 20.05,
-      canPurchase: false,
-      soldOut: false
-    }
-  ];
 })();
