@@ -24,7 +24,7 @@
     <main-header></main-header>
     <div id="wrapper">
       <section ng-controller="ListController as listCtrl">
-        <input type="button" value="Submit a new item" ng-click="testFormCtrl.showForm = !testFormCtrl.showForm">
+        <button ng-click="testFormCtrl.showForm = !testFormCtrl.showForm">{{testFormCtrl.showForm ? 'Hide' : 'Show'}}</button>
         <test-form ng-show="testFormCtrl.showForm"></test-form>
         <ul id="gallery">
           <li ng-repeat="item in listCtrl.listItems | limitTo:10 | orderBy:'-price'" ng-hide="item.soldOut">
