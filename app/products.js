@@ -12,12 +12,17 @@
         templateUrl: 'partials/product-form.html',
         controller: function() {
           this.review = {};
+          this.item = {mark:{}};
           this.addReview = function(item) {
             item.reviews.push(this.review);
             this.review = {};
           };
         },
-        controllerAs: 'reviewCtrl'
+        controllerAs: 'reviewCtrl',
+        scope: {
+          items: "=",
+          marks: "="
+        }
       };
     })
     .directive('productPanels', function() {
@@ -33,7 +38,11 @@
             return checkTab === this.tab;
           };
         },
-        controllerAs: 'panelCtrl'
+        controllerAs: 'panelCtrl',
+        scope: {
+          items: "=",
+          marks: "="
+        }
       };
     });
 })();

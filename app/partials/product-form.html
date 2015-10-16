@@ -1,6 +1,11 @@
 <form name="reviewForm" ng-submit="reviewForm.$valid && reviewCtrl.addReview(item)" novalidate>
   <blockquote>
     <b>Stars: {{reviewCtrl.review.stars}}</b>
+    <ul>
+      <li ng-repeat="(mark, state) in reviewCtrl.review.mark" ng-show="state">
+        <span>{{mark}}</span>
+      </li>
+    </ul>
     {{reviewCtrl.review.text}}
     <cite>by: {{reviewCtrl.review.author}}</cite>
   </blockquote>
@@ -12,6 +17,15 @@
       <option value="4">4 stars</option>
       <option value="5">5 stars</option>
     </select>
+  </div>
+  <div class="add-mark">
+    <p>Mark it:</p>
+    <div>
+      <label for="{{mark}}" ng-repeat="mark in marks">
+        <input type="checkbox" name="mark" id="{{mark}}" ng-model="reviewCtrl.review.mark[mark]"/>
+        {{mark}}
+      </label>
+    </div>
   </div>
   <div>
     <textarea placeholder="your review here" ng-model="reviewCtrl.review.text" required></textarea>

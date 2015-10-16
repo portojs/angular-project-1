@@ -25,11 +25,11 @@
     <div id="wrapper">
       <section ng-controller="ListController as listCtrl">
         <button ng-click="testFormCtrl.showForm = !testFormCtrl.showForm">{{testFormCtrl.showForm ? 'Hide' : 'Show'}}</button>
-        <test-form ng-show="testFormCtrl.showForm"></test-form>
+        <test-form items="listCtrl.listItems" types="listCtrl.itemTypes" ng-show="testFormCtrl.showForm"></test-form>
         <ul id="gallery">
           <li ng-repeat="item in listCtrl.listItems | limitTo:10 | orderBy:'-price'" ng-hide="item.soldOut">
             <product-info></product-info>
-            <product-panels></product-panels>
+            <product-panels items="listCtrl.listItems" marks="listCtrl.itemMarks"></product-panels>
           </li>
         </ul>
       </section>

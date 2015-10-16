@@ -1,9 +1,12 @@
 (function(){
+  var marksList = ["splendid", "terrific", "fantastic", "wonderful", "sucks", "mediocre", "worst"];
+
   angular.module('listApp', ['list-products'])
     .controller('ListController', ['$http', function($http) {
       var listCtrl = this;
-      //listCtrl.listItems = doom;
-      listCtrl.itemTypes = [];
+      this.itemMarks = marksList;
+      listCtrl.listItems = [];
+      //listCtrl.itemTypes = [];
       $http.get('products.json').success(function(data) {
         listCtrl.listItems = data;
       });
@@ -33,8 +36,14 @@
         templateUrl: 'partials/test-form.html',
         controller: function() {
           this.showForm = false;
+          this.item = {type:{}};
         },
-        controllerAs: 'testFormCtrl'
+        controllerAs: 'testFormCtrl',
+        scope: {
+          items: "=",
+          types: "="
+        }
       }
     });
+
 })();

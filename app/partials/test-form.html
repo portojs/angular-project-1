@@ -3,4 +3,11 @@
   <input type="text">
   <input type="text">
   <input type="text">
+  <div ng-repeat="type in types">
+    <label for="type">
+      <input type="checkbox" name="type" id="type" ng-model="testFormCtrl.items.type[type]"/>
+      {{type}}
+    </label>
+  </div>
+  </ul>
 </form>

@@ -3,7 +3,7 @@
     "url": "img/numbers-01.jpg",
     "author": "Provided by: &copy; Tom Sawyer, 1889.",
     "description": "A unique piece of art made by one of the brightest minds in human history.",
-    "type": {"borrowed": true, "graphics": true},
+    "mark": {"splendid": true, "terrific": true},
     "reviews": [
       {
       "stars": 5,
@@ -19,7 +19,7 @@
     "url": "img/numbers-02.jpg",
     "author": "Provided by: &copy; Jimi Hendrix, 1969.",
     "description": "A unique piece of art made by one of the brightest minds in human history.",
-    "type": {"borrowed": true, "graphics": true},
+    "mark": {"splendid": true, "terrific": true},
     "reviews": [
       {
       "stars": 5,
@@ -35,7 +35,7 @@
     "url": "img/numbers-06.jpg",
     "author": "Provided by: &copy; Freddy Mercury, 1989.",
     "description": "A unique piece of art made by one of the brightest minds in human history.",
-    "type": {"borrowed": true, "graphics": true},
+    "mark": {"splendid": true, "terrific": true},
     "reviews": [
   {
   "stars": 5,
@@ -51,7 +51,7 @@
     "url": "img/numbers-09.jpg",
     "author": "Provided by: &copy; Kurt Cobain, 1991.",
     "description": "A unique piece of art made by one of the brightest minds in human history.",
-    "type": {"borrowed": true, "graphics": true},
+    "mark": {"splendid": true, "terrific": true},
     "reviews": [
   {
   "stars": 5,
@@ -67,7 +67,7 @@
     "url": "img/numbers-12.jpg",
     "author": "Provided by: &copy; Jim Morrison, 1970.",
     "description": "A unique piece of art made by one of the brightest minds in human history.",
-    "type": {"borrowed": true, "graphics": true},
+    "mark": {"splendid": true, "terrific": true},
     "reviews": [
   {
   "stars": 5,
